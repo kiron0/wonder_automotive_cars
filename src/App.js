@@ -37,7 +37,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/add-inventory/:id"
+          path="/inventory/:id"
           element={<InventoryDetails></InventoryDetails>}
         ></Route>
         <Route

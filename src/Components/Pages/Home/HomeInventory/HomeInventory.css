@@ -1,7 +1,7 @@
 .inventoryCards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 3rem;
 }
 
 @media screen and (max-width: 490px) {
