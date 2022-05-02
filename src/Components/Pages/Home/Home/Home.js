@@ -10,7 +10,7 @@ const Home = () => {
       <div className="home-info reverse">
         <p className="text-muted">50% OFF EVERYTHING</p>
         <h1>New Cars Arrivals</h1>
-        <h3>We offer free shipping on all orders over $350.</h3>
+        <h3>We offer free shipping on all orders over $150000.</h3>
         <br />
         <a className="explore-btn" href="#explore">
           Explore more

@@ -16,13 +16,14 @@ import AllInventory from "./Components/Pages/Home/AllInventory/AllInventory";
 import Footer from "./Components/Pages/Footer/Footer";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 import MyInventory from "./Components/Pages/MyInventory/MyInventory";
+import HomeInventory from "./Components/Pages/Home/HomeInventory/HomeInventory";
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/" element={<><Home></Home><HomeInventory></HomeInventory></>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>

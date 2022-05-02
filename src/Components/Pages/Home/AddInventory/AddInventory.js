@@ -29,7 +29,7 @@ const AddInventory = () => {
     formData.append("quantity", quantity);
     formData.append("image", image);
     formData.append("email", email);
-    fetch("http://localhost:5000/cars", {
+    fetch("https://cars-warehouse.herokuapp.com/cars", {
       method: "POST",
       body: formData,
     })
@@ -132,7 +132,7 @@ const AddInventory = () => {
         <Button
           variant="contained"
           type="submit"
-          style={{ marginLeft: "9rem" }}
+          className="add-btn"
         >
           Add Inventory
         </Button>
