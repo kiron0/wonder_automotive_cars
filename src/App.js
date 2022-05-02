@@ -15,6 +15,7 @@ import Blog from "./Components/Pages/Blog/Blog";
 import AllInventory from "./Components/Pages/Home/AllInventory/AllInventory";
 import Footer from "./Components/Pages/Footer/Footer";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
+import MyInventory from "./Components/Pages/MyInventory/MyInventory";
 
 function App() {
   return (
@@ -43,6 +44,14 @@ function App() {
           element={
             <RequireAuth>
               <AllInventory></AllInventory>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/my-items"
+          element={
+            <RequireAuth>
+              <MyInventory></MyInventory>
             </RequireAuth>
           }
         ></Route>
