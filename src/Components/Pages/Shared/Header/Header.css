@@ -79,7 +79,7 @@
 }
 
 .user img {
-  width: 80%;
+  width: 50% !important;
   padding-right: 5px;
 }
 
@@ -113,12 +113,11 @@
   }
   .link {
     font-size: 1.2rem;
-    margin-left: 2rem;
   }
   #basic-navbar-nav {
     margin-left: 30%;
   }
   .title {
-    margin-left: -5rem;
+    margin-left: 6.5rem;
   }
 }

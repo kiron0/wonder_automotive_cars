@@ -13,6 +13,7 @@ function ManageInventory({
   const handleShow = () => setShow(true);
   return (
     <div className="admin-vol-list">
+      <h5 className="display-5 py-lg-4 pb-2 text-center">Manage Inventory List</h5>
       <div className="admin-content">
         <table>
           <thead>
@@ -41,7 +42,7 @@ function ManageInventory({
                   </td>
                   <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
-                      {/* <Modal.Title>Attention!</Modal.Title> */}
+                      <Modal.Title>Attention!</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>Are you want to delete this?</Modal.Body>
                     <Modal.Footer>

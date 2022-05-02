@@ -8,6 +8,7 @@ function InventoryDetails() {
   const { id } = useParams();
   const [inventoryDetail] = useInventoryDetail(id);
   const { name, quantity, price, description, supplier } = inventoryDetail;
+
   return (
     <div className="mx-auto d-block w-50 text-start updated">
       <div className="w-50 mx-auto d-block my-2">

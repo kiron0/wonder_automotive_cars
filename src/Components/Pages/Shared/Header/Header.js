@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -33,7 +33,6 @@ const Header = () => {
       sticky="top 2rem"
       className={header ? "header active" : "header"}
     >
-      <Container>
         <Navbar.Brand>
           <Link className="title text-black" to="/">
             Wonder Automotive Cars
@@ -83,7 +82,6 @@ const Header = () => {
             )}
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
   );
 };
