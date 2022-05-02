@@ -39,8 +39,8 @@ const Login = () => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-
     signInWithEmailAndPassword(email, password);
+    toast.success("Login Successfully!");
   };
 
   const resetPassword = async () => {
@@ -90,7 +90,6 @@ const Login = () => {
                 <Link
                   className="text-primary"
                   to="/signup"
-                  onClick={navigate("/signup")}
                 >Signup
                 </Link>
               </span>
