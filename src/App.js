@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
+import NotFound from "./Components/Pages/Shared/NotFound/NotFound";
+import Home from "./Components/Pages/Home/Home/Home";
+import Header from "./Components/Pages/Shared/Header/Header";
+import Login from "./Components/Pages/Login/Login/Login";
+import Signup from "./Components/Pages/Login/Signup/Signup";
+import AddInventory from "./Components/Pages/Home/AddInventory/AddInventory";
+import InventoryDetails from "./Components/Pages/Home/InventoryDetails/InventoryDetails";
+import Blog from "./Components/Pages/Blog/Blog";
+import AllInventory from "./Components/Pages/Home/AllInventory/AllInventory";
+import Footer from "./Components/Pages/Footer/Footer";
+import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route
+          path="/add-inventory"
+          element={
+            <RequireAuth>
+              <AddInventory></AddInventory>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/add-inventory/:id"
+          element={<InventoryDetails></InventoryDetails>}
+        ></Route>
+        <Route
+          path="/manage"
+          element={
+            <RequireAuth>
+              <AllInventory></AllInventory>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
+      <Footer></Footer>
+      <ToastContainer></ToastContainer>
+      <Toaster></Toaster>
     </div>
   );
 }
