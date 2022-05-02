@@ -13,7 +13,7 @@ const AllInventory = () => {
   return (
     <div className="inventories-container">
       <PageTitle title="Manage Items"></PageTitle>
-      <h2 style={{ margin: "50px 0" }}>Our Inventory: {inventories.length}</h2>
+      <h2 style={{ margin: "50px 0", textAlign: 'center' }}>Our Inventory: {inventories.length}</h2>
       <div className="inventories">
         {inventories.map((inventory) => (
           <ManageInventory

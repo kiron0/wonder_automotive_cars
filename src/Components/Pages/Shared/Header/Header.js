@@ -35,7 +35,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand>
           <Link className="title text-black" to="/">
-            Car Warehouse System
+          Wonder Automotive Cars
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggle">
