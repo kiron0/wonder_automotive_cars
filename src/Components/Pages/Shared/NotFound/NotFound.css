@@ -1,0 +1,46 @@
+.not-found {
+  overflow-x: hidden !important;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.not-found img {
+  margin: 0 auto;
+  display: block;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 490px) {
+  .not-found {
+    width: 100vw;
+    margin-top: 2rem;
+    height: 90vh;
+  }
+  .not-found img {
+    overflow-x: hidden !important;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    height: 60%;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 776px) {
+  .not-found img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .not-found img {
+    margin: 0 auto;
+    display: block;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
