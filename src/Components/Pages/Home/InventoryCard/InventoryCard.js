@@ -1,29 +1,40 @@
 import React from "react";
+import { Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import './InventoryCard.css';
+import "./InventoryCard.css";
 
 const InventoryCard = ({ inventoryCard }) => {
   const { _id, image, name, supplier, quantity, description, price } =
     inventoryCard;
-    const navigate = useNavigate();
-    const navigateToInventoryDetail = id =>{
-      navigate(`/inventory/${id}`);
-  }
+  const navigate = useNavigate();
+  const navigateToInventoryDetail = (id) => {
+    navigate(`/inventory/${id}`);
+  };
+
+  const displayContent = (description) => {
+    return description.length < 130
+      ? description
+      : description.slice(0, 130) + "... read more";
+  };
+
   return (
     <div className="inventory-card">
-      <div className="w-100">
-        <img
-          src={`data:image/png;base64,${image}`}
-          alt=""
-          className="w-100 mx-auto"
-        />
-      </div>
-      <p>{name}</p>
-      <p>{quantity} items</p>
-      <h4>${price}</h4>
-      <p>Description: {description}</p>
-      <h4>Supplier: {supplier}</h4>
-      <button className="btn btn-dark" onClick={() => navigateToInventoryDetail(_id)}>Stock Update</button>
+      <Card className="border-0">
+        <Card.Img variant="top" src={`data:image/png;base64,${image}`} />
+        <Card.Body>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>{quantity} cars</Card.Text>
+          <Card.Text className="fs-4 fw-bold">${price}</Card.Text>
+          <Card.Text title={description}>{displayContent(description)}</Card.Text>
+          <Card.Text className="fs-6 fw-bold">Supplier: {supplier}</Card.Text>
+          <Button
+            variant="primary"
+            onClick={() => navigateToInventoryDetail(_id)}
+          >
+            Stock Update
+          </Button>
+        </Card.Body>
+      </Card>
     </div>
   );
 };

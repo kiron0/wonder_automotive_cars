@@ -49,7 +49,7 @@
   font-size: 2rem;
 }
 
-.btn {
+/* .btn {
   font-size: 1.2rem;
   line-height: 22px;
   border-radius: 6px;
@@ -69,7 +69,7 @@
   background: #434141;
   color: #fff;
   border-color: #434141;
-}
+} */
 
 .nav-item {
   display: flex;

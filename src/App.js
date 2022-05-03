@@ -13,10 +13,11 @@ import AddInventory from "./Components/Pages/Home/AddInventory/AddInventory";
 import InventoryDetails from "./Components/Pages/Home/InventoryDetails/InventoryDetails";
 import Blog from "./Components/Pages/Blog/Blog";
 import AllInventory from "./Components/Pages/Home/AllInventory/AllInventory";
-import Footer from "./Components/Pages/Footer/Footer";
+import Footer from "./Components/Pages/Shared/Footer/Footer";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 import MyInventory from "./Components/Pages/MyInventory/MyInventory";
 import HomeInventory from "./Components/Pages/Home/HomeInventory/HomeInventory";
+import ScrollButton from "./Components/Pages/Shared/ScrollButton/ScrollButton";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ScrollButton></ScrollButton>
       <Footer></Footer>
       <ToastContainer></ToastContainer>
       <Toaster></Toaster>

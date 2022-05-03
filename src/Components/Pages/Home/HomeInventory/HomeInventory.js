@@ -7,7 +7,7 @@ const HomeInventory = () => {
   const [inventoryCards] = useInventory();
   return (
     <div>
-      <h2 className="text-center">Inventory items</h2>
+      <h2 className="text-center" style={{marginBottom: '3rem'}}>Inventory items</h2>
       <span className="inventoryCards-container container">
         {inventoryCards.slice(0, 6).map((inventoryCard) => (
           <InventoryCard
