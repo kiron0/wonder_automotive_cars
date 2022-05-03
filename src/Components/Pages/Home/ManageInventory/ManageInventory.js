@@ -11,15 +11,18 @@ function ManageInventory({
 }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return (
     <div className="admin-vol-list">
-      <h5 className="display-5 py-lg-4 pb-2 text-center">Manage Inventory List</h5>
+      <h5 className="display-5 py-lg-4 pb-2 text-center">
+        Manage Inventory List
+      </h5>
       <div className="admin-content">
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email ID</th>
+              <th>Inventory Name</th>
+              <th>User Email</th>
               <th>Price</th>
               <th>Quantity</th>
               <th>Supplier</th>

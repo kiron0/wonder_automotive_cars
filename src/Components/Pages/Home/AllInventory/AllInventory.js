@@ -16,9 +16,14 @@ const AllInventory = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        toast.success("Inventory deleted successfully!");
+        toast.success("Inventory Deleted successfully!", {
+          duration: 4000,
+          position: "top-center",
+        });
         if (result) {
-          const inventory = inventories.filter((inventoryItem) => inventoryItem._id !== id);
+          const inventory = inventories.filter(
+            (inventoryItem) => inventoryItem._id !== id
+          );
           setInventories(inventory);
         }
       });

@@ -10,6 +10,7 @@ import { toast } from "react-hot-toast";
 import Loading from "../../Shared/Loading/Loading";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 import { auth } from "../../../../Firebase/Firebase.init";
+import useToken from "../../../../hooks/useToken";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -22,10 +23,10 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-
+    const [token] = useToken(user);
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
   }
   if (error) {

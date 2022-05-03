@@ -10,12 +10,13 @@ import { auth } from "../../../../Firebase/Firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import useToken from "../../../../hooks/useToken";
 
 const Signup = () => {
   const [agree, setAgree] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-
+  const [token] = useToken(user);
   const [updateProfile, updating] = useUpdateProfile(auth);
 
   const nameRef = useRef("");
@@ -43,7 +44,7 @@ const Signup = () => {
   if (loading || updating) {
     return <Loading />;
   }
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
   }
   return (

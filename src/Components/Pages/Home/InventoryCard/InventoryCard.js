@@ -12,9 +12,9 @@ const InventoryCard = ({ inventoryCard }) => {
   };
 
   const displayContent = (description) => {
-    return description.length < 130
+    return description?.length < 20
       ? description
-      : description.slice(0, 130) + "... read more";
+      : description?.slice(0, 100) + "... read more";
   };
 
   return (

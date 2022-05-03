@@ -8,10 +8,12 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../../Firebase/Firebase.init";
 import { toast } from "react-hot-toast";
+import useToken from "../../../../hooks/useToken";
 
 const SocialLogin = () => {
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
   const [signInWithGithub, user2, loading2, error2] = useSignInWithGithub(auth);
+  const [token] = useToken(user1 || user2);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -37,7 +39,7 @@ const SocialLogin = () => {
     </div>;
   }
 
-  if (user1 || user2) {
+  if (token) {
     navigate(from, { replace: true });
   }
 

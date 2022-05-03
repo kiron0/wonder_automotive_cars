@@ -49,17 +49,13 @@
   font-size: 2rem;
 }
 
-/* .btn {
-  font-size: 1.2rem;
-  line-height: 22px;
-  border-radius: 6px;
-  padding: 13px 44px;
+.btn {
+  color: #fff !important;
   text-decoration: none !important;
-  font-size: 1.2rem;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
+/* 
 .btn.btn-primary {
   background: var(--primary);
   color: #fff !important;
