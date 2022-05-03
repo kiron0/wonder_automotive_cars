@@ -1,13 +1,20 @@
 import React from "react";
 import useInventory from "../../../../hooks/useInventory";
+import Loading from "../../Shared/Loading/Loading";
 import InventoryCard from "../InventoryCard/InventoryCard";
-import './HomeInventory.css'
+import "./HomeInventory.css";
 
 const HomeInventory = () => {
   const [inventoryCards] = useInventory();
+  if (inventoryCards.length === 0) {
+    return (
+      <div>
+        <Loading></Loading>
+      </div>
+    );
+  }
   return (
     <div>
-      <h2 className="text-center" style={{marginBottom: '3rem'}}>Inventory items</h2>
       <span className="inventoryCards-container container">
         {inventoryCards.slice(0, 6).map((inventoryCard) => (
           <InventoryCard

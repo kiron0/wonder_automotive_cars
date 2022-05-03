@@ -11,12 +11,6 @@ const InventoryCard = ({ inventoryCard }) => {
     navigate(`/inventory/${id}`);
   };
 
-  const displayContent = (description) => {
-    return description?.length < 20
-      ? description
-      : description?.slice(0, 100) + "... read more";
-  };
-
   return (
     <div className="inventory-card">
       <Card className="border-0">
@@ -25,7 +19,12 @@ const InventoryCard = ({ inventoryCard }) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>{quantity} cars</Card.Text>
           <Card.Text className="fs-4 fw-bold">${price}</Card.Text>
-          <Card.Text title={description}>{displayContent(description)}</Card.Text>
+          <Card.Text>
+            {description.slice(0, 100)}
+            {description.length > 100 && (
+              <span title={`${description}`}>...read more</span>
+            )}
+          </Card.Text>
           <Card.Text className="fs-6 fw-bold">Supplier: {supplier}</Card.Text>
           <Button
             variant="primary"

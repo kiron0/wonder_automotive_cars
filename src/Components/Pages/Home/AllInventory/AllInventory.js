@@ -20,12 +20,7 @@ const AllInventory = () => {
           duration: 4000,
           position: "top-center",
         });
-        if (result) {
-          const inventory = inventories.filter(
-            (inventoryItem) => inventoryItem._id !== id
-          );
-          setInventories(inventory);
-        }
+        setInventories(inventories.filter((inventory) => inventory._id !== id));
       });
     setShow(false);
   };

@@ -3,7 +3,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div style={{height: '100vh'}} className="w-100 d-flex justify-content-center align-items-center">
+    <div style={{height: '20vh'}} className="w-100 d-flex justify-content-center align-items-center">
       <Button variant="primary" disabled>
         <Spinner
           as="span"
