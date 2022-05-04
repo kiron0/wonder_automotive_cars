@@ -1,9 +1,18 @@
+.main-content-area {
+  margin-bottom: 3rem;
+}
+
 .custom-padding {
   padding: 90px 0 60px 0;
 }
 .heading-color {
   color: red;
 }
+
+.gray {
+  background-color: #f6f6f6;
+}
+
 .title h3 {
   margin: 0;
 }
@@ -12,6 +21,13 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .about-us .title {
   margin-bottom: 30px;
 }
@@ -60,7 +76,6 @@
 }
 
 .services-grid {
-  background-color: #fff;
   transition: all 0.3s ease 0s;
   margin-bottom: 30px;
   position: relative;

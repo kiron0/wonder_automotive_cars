@@ -18,7 +18,14 @@
   display: block;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
+  color: #222;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 2;
 }
 
 .featured h1::after {
@@ -27,10 +34,21 @@
   content: "";
   height: 1px;
   left: 0;
-  margin: 0;
+  margin: 0 auto;
   position: absolute;
   right: 0;
   width: 59px;
+}
+.featured h1::before {
+  background-color: #242424;
+  bottom: 6px;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 99px;
 }
 
 .car-img {

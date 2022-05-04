@@ -5,6 +5,7 @@ import PageTitle from "../../Shared/PageTitle/PageTitle";
 import HomeInventory from "../HomeInventory/HomeInventory";
 import StatisticsCounter from "../StaticticsCouter/StatisticsCounter";
 import Banner from "../Banner/Banner";
+import Footer from "../../Shared/Footer/Footer";
 
 const Home = () => {
   return (
@@ -26,12 +27,13 @@ const Home = () => {
       </div>
       <Banner></Banner>
       <div className="featured">
-        <h1>Our 
-          Latest <span class="heading-color"> Featured</span> Cars
+        <h1>
+          Our Latest <span class="heading-color"> Featured</span> Cars
         </h1>
       </div>
       <HomeInventory></HomeInventory>
       <StatisticsCounter></StatisticsCounter>
+      <Footer></Footer>
     </>
   );
 };

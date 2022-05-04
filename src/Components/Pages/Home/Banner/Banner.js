@@ -7,7 +7,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="main-content-area clearfix">
+    <div className="main-content-area clearfix gray">
       <section className="custom-padding about-us">
         <div className="container">
           <div className="row">
@@ -34,7 +34,7 @@ const Banner = () => {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <img
-                className="wow slideInRight center-block img-responsive w-100"
+                className="center-block img-responsive"
                 data-wow-delay="0ms"
                 data-wow-duration="3000ms"
                 alt=""

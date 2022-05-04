@@ -1,0 +1,217 @@
+footer {
+  display: block;
+}
+
+footer a {
+  text-decoration: none;
+}
+footer li span:hover {
+  color: red;
+}
+
+.footer-bg {
+  padding-bottom: 5rem;
+}
+
+.widget ul > li > a:hover {
+  color: red;
+}
+
+footer .footer-bg {
+  padding-bottom: 110px;
+  position: relative;
+  border-top: 1px dashed #ddd;
+  background: rgba(0, 0, 0, 0) url("../../../Assets/footer-banner.png") repeat-x
+    scroll center bottom;
+}
+
+.footer-bg .footer-top,
+.footer-bg .copyrights {
+  background-color: transparent;
+  border-top: medium none;
+}
+
+.footer-bg .footer-top {
+  padding: 70px 0 10px;
+}
+
+.footer-bg .copyrights .copyright-content {
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+
+.footer-bg .footer-top {
+  padding: 70px 0 10px;
+}
+
+.footer-top {
+  background-color: #202020;
+  padding: 70px 0 30px;
+}
+
+.footer-top .widget .logo {
+  margin: 0 0 10px;
+}
+
+.footer-top .widget p {
+  margin-bottom: 20px;
+}
+
+.footer-top .widget h5 {
+  font-size: 18px;
+  display: block;
+  margin: 0 0 18px;
+  color: #232323;
+  font-weight: 500;
+}
+
+.footer-top .widget ul li {
+  display: inline-block;
+  margin: 0 4px 4px 0;
+}
+
+.footer-top .widgettext address {
+  font-style: normal;
+  line-height: 30px;
+}
+
+.footer-top .widgettext address span {
+  color: #333;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.footer-top .widget.social-icons ul li {
+  display: block;
+  margin-right: 3px;
+  margin-bottom: 10px;
+}
+
+.footer-top .widget.my-quicklinks ul li {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 3px;
+}
+
+.footer-top .widget.social-icons li span:hover {
+  cursor: pointer;
+}
+
+.footer-top .widget.my-quicklinks ul li a {
+  color: #777;
+}
+
+.footer-top .widget.social-icons ul li a {
+  background-color: #000;
+  border-radius: 100%;
+  display: inline-block;
+  height: 28px;
+  margin-right: 8px;
+  padding: 0;
+  text-align: center;
+  width: 28px;
+}
+
+.footer-top .widget.social-icons li a i {
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer-top .widget.social-icons li a.Facebook {
+  background-color: #2b4a8b;
+}
+
+.footer-top .widget.social-icons li a.Twitter {
+  background-color: #1f94d9;
+}
+
+.footer-top .widget.social-icons li a.Linkedin {
+  background-color: #10598c;
+}
+
+.footer-top .widget.social-icons li a.Google {
+  background-color: #d83936;
+}
+
+.footer-top .widget.social-icons li a.Vimeo {
+  background-color: #1ab7ea;
+}
+
+.footer-top .widget.social-icons li a.Pinterest {
+  background-color: #cd201f;
+}
+
+.footer-top .widget.social-icons li a.Tumblr {
+  background-color: #2c4762;
+}
+
+.footer-top .widget.social-icons li a.Instagram {
+  background-color: #3f729b;
+}
+
+.footer-top .widget.social-icons li a.Reddit {
+  background-color: #eff7ff;
+}
+
+.footer-top .widget.social-icons li a.Flickr {
+  background-color: #ff0084;
+}
+
+.footer-top .widget.social-icons li a.StumbleUpon {
+  background-color: #ff7257;
+}
+
+.footer-top .widget.social-icons li a.behance {
+  background-color: #1e6fed;
+}
+
+.footer-top .widget.social-icons li a.DeviantART {
+  background-color: #05cc47;
+}
+.footer-top .widget-newsletter .fieldset form input[type="text"] {
+  background-color: #f5f5f5;
+  border: medium none;
+  color: #999;
+  font-size: 12px;
+  height: 48px;
+  padding: 0 15px;
+  width: 100%;
+  border: none;
+}
+.widget-newsletter .fieldset P {
+  line-height: 27.8px;
+  margin-bottom: 20px;
+}
+
+.widget-newsletter .fieldset form {
+  position: relative;
+}
+
+.widget-newsletter .fieldset form .submit-btn {
+  border: medium none;
+  color: #fff;
+  background-color: red;
+  display: block;
+  height: 48px;
+  padding: 0 18px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.widget-newsletter .fieldset.has-border {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #f8f8f8 #f1f1f1 #f1f1f1;
+  border-image: none;
+  border-style: solid;
+  border-width: 2px 1px 1px;
+  padding: 15px 15px 20px;
+}
+
+.copyright p {
+  margin: 20px 0 0 0;
+}

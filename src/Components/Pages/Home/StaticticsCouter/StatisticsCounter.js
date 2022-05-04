@@ -7,7 +7,7 @@ import "./StatisticsCounter.css";
 
 const StatisticsCounter = () => {
   return (
-    <div className="funfacts custom-padding parallex">
+    <div className="funfacts custom-padding parallex mb-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6">
