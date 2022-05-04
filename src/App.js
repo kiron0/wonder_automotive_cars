@@ -16,7 +16,6 @@ import AllInventory from "./Components/Pages/Home/AllInventory/AllInventory";
 import Footer from "./Components/Pages/Shared/Footer/Footer";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 import MyInventory from "./Components/Pages/MyInventory/MyInventory";
-import HomeInventory from "./Components/Pages/Home/HomeInventory/HomeInventory";
 import ScrollButton from "./Components/Pages/Shared/ScrollButton/ScrollButton";
 
 function App() {
@@ -24,8 +23,8 @@ function App() {
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path="/" element={<><Home></Home><HomeInventory></HomeInventory></>}></Route>
-        <Route path="/home" element={<><Home></Home><HomeInventory></HomeInventory></>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>

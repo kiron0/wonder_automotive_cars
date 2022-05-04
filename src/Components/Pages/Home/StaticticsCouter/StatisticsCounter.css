@@ -1,0 +1,69 @@
+.funfacts {
+  background: rgba(0, 0, 0, 0) url("../../../Assets/banner.jpg") no-repeat
+    scroll center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.funfacts {
+  height: 100%;
+  text-align: center;
+}
+
+.funfacts h4 span {
+  color: red;
+}
+
+.funfacts .number {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.funfacts h4 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.funfacts .icons {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  clear: both;
+  display: table;
+  margin-bottom: 25px;
+}
+
+.funfacts .icons i {
+  font-size: 60px;
+  color: #fff;
+}
+
+.custom-padding {
+  padding: 90px 0 60px 0;
+}
+
+.parallex {
+  color: #fff;
+  position: relative;
+  z-index: 44;
+}
+.parallex h2 {
+  color: #fff;
+  position: relative;
+  z-index: 44;
+}
+.parallex::before {
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

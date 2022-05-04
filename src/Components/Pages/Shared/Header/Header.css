@@ -55,17 +55,6 @@
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
-/* 
-.btn.btn-primary {
-  background: var(--primary);
-  color: #fff !important;
-  border-color: var(--primary);
-}
-.btn.btn-dark {
-  background: #434141;
-  color: #fff;
-  border-color: #434141;
-} */
 
 .nav-item {
   display: flex;

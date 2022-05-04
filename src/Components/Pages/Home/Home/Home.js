@@ -2,6 +2,8 @@ import React from "react";
 import "./Home.css";
 import Car from "../../../Assets/car.jpg";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
+import HomeInventory from "../HomeInventory/HomeInventory";
+import StatisticsCounter from "../StaticticsCouter/StatisticsCounter";
 
 const Home = () => {
   return (
@@ -24,6 +26,8 @@ const Home = () => {
       <h2 className="text-center font-normal fst-italic" style={{ marginBottom: "3rem" }}>
         Inventory items
       </h2>
+      <HomeInventory></HomeInventory>
+      <StatisticsCounter></StatisticsCounter>
     </>
   );
 };
