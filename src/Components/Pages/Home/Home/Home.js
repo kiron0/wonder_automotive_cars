@@ -4,6 +4,7 @@ import Car from "../../../Assets/car.jpg";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 import HomeInventory from "../HomeInventory/HomeInventory";
 import StatisticsCounter from "../StaticticsCouter/StatisticsCounter";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
@@ -23,9 +24,12 @@ const Home = () => {
           <img src={Car} alt="" />
         </div>
       </div>
-      <h2 className="text-center font-normal fst-italic" style={{ marginBottom: "3rem" }}>
-        Inventory items
-      </h2>
+      <Banner></Banner>
+      <div className="featured">
+        <h1>Our 
+          Latest <span class="heading-color"> Featured</span> Cars
+        </h1>
+      </div>
       <HomeInventory></HomeInventory>
       <StatisticsCounter></StatisticsCounter>
     </>

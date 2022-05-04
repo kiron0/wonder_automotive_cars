@@ -14,6 +14,25 @@
   background-size: cover; */
 }
 
+.featured h1{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.featured h1::after {
+  background-color: #242424;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 59px;
+}
+
 .car-img {
   width: 100%;
   object-fit: cover;

@@ -1,0 +1,110 @@
+.custom-padding {
+  padding: 90px 0 60px 0;
+}
+.heading-color {
+  color: red;
+}
+.title h3 {
+  margin: 0;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.about-us .title {
+  margin-bottom: 30px;
+}
+.about-us .content p {
+  font-size: 18px;
+}
+.about-us .title h3::after {
+  background-color: #242424;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 59px;
+}
+.about-us .title h3 {
+  color: #222;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 2;
+}
+.about-us .title h3::before {
+  background-color: #242424;
+  bottom: 6px;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 99px;
+}
+.about-us .content p .service-summary {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.services-grid {
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.services-grid .icons i {
+  background: #fbfbfb none repeat scroll 0 0;
+  border-radius: 100px;
+  color: #000;
+  display: block;
+  font-size: 42px;
+  height: 90px;
+  line-height: 90px;
+  position: relative;
+  text-align: center;
+  width: 90px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.services-grid h4 {
+  color: #323232;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.services-grid p:last-child {
+  margin-bottom: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+
+@media screen and (max-width: 490px) {
+  .about-us .title h3 {
+    font-size: 24px;
+  }
+}

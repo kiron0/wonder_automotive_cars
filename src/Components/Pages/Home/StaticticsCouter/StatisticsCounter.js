@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import { AiOutlineSecurityScan } from "react-icons/ai";
+import { VscShield } from "react-icons/vsc";
 import { GiSteeringWheel, GiTrophyCup } from "react-icons/gi";
 import { FiHeart } from "react-icons/fi";
 import "./StatisticsCounter.css";
@@ -28,9 +28,9 @@ const StatisticsCounter = () => {
           </div>
           <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <div className="icons">
-              <AiOutlineSecurityScan
+              <VscShield
                 style={{ fontSize: "5rem", color: "#fff" }}
-              ></AiOutlineSecurityScan>
+              ></VscShield>
             </div>
             <div className="number">
               <span
