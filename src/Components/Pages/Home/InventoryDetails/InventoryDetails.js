@@ -83,7 +83,7 @@ function InventoryDetails() {
     }
     // negative input value
     if (inputValue < 0) {
-      return toast.error("Please add positive quantity!");
+      return toast.error("Out of Stock!");
     }
     const card = {
       name,
