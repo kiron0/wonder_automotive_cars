@@ -6,6 +6,19 @@
   --yellow: #ffbd3e;
   --orange: #ff7044;
   --blue: #421fcf;
+
+  --first-hue: 207;
+  --sat: 90%;
+  --lig: 69%;
+  --second-hue: 219;
+
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 65%); /* -4% */
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color: hsl(var(--second-hue), 32%, 12%);
 }
 
 body {
@@ -16,4 +29,19 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.2rem;
+  background-color: hsl(var(--second-hue), 8%, 38%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.6rem;
+  background-color: hsl(var(--second-hue), 8%, 26%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--second-hue), 8%, 20%);
 }
