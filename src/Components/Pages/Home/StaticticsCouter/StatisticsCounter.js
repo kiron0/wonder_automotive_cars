@@ -7,7 +7,7 @@ import "./StatisticsCounter.css";
 
 const StatisticsCounter = () => {
   return (
-    <div className="funfacts custom-padding parallex mb-5">
+    <div className="funfacts custom-padding mb-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -33,8 +33,7 @@ const StatisticsCounter = () => {
               ></VscShield>
             </div>
             <div className="number">
-              <span
-              >
+              <span>
                 <CountUp delay={1} end={820} duration={1.5} />
               </span>
               +
@@ -48,8 +47,7 @@ const StatisticsCounter = () => {
               <FiHeart style={{ fontSize: "5rem", color: "#fff" }}></FiHeart>
             </div>
             <div className="number">
-              <span
-              >
+              <span>
                 <CountUp delay={1} end={1042} duration={1.5} />
               </span>
               +
@@ -60,11 +58,12 @@ const StatisticsCounter = () => {
           </div>
           <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <div className="icons">
-              <GiTrophyCup style={{ fontSize: "5rem", color: "#fff" }}></GiTrophyCup>
+              <GiTrophyCup
+                style={{ fontSize: "5rem", color: "#fff" }}
+              ></GiTrophyCup>
             </div>
             <div className="number">
-              <span
-              >
+              <span>
                 <CountUp delay={1} end={34} duration={1.5} />
               </span>
               +
