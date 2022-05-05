@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./MyInventory.css";
 import { auth } from "../../../Firebase/Firebase.init";
 import axios from "axios";
+import Swal from "sweetalert2";
 import { toast } from "react-hot-toast";
 import UserInventory from "../UserInventory/UserInventory";
 
@@ -47,26 +48,36 @@ const MyInventory = () => {
   }
 
   const handleDelete = (id) => {
-    const confirm = window.confirm("Are you sure you want to delete");
-    if (!confirm) {
-      return;
-    }
-    const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
-    fetch(url, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) {
-          toast.success("Deleted successfully");
-          setMyInventories(
-            myInventories.filter((inventory) => inventory.id !== id)
-          );
-          setIsReload(!isReload);
-        }
-      });
+    // confirm dialog when user click on delete button
+    Swal.fire({
+      title: "Are you sure you to delete?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.value) {
+        // if user click on delete button
+        const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data) {
+              toast.success("Deleted successfully");
+              setMyInventories(
+                myInventories.filter((inventory) => inventory.id !== id)
+              );
+              setIsReload(!isReload);
+            } else {
+              toast.error(data.message);
+            }
+          });
+      }
+    });
   };
-
   return (
     <div>
       <h2 className="text-center">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import { toast } from "react-hot-toast";
+import Swal from "sweetalert2";
 import { InputGroup, FormControl } from "react-bootstrap";
 import "./InventoryDetails.css";
 import Loading from "../../Shared/Loading/Loading";
@@ -23,7 +24,7 @@ function InventoryDetails() {
       </div>
     );
   }
-  const deliveredInventory = (e) => {
+  const deliveredInventory = () => {
     const name = item.name;
     const image = item.image;
     const description = item.description;
@@ -31,37 +32,49 @@ function InventoryDetails() {
     const quantity = parseInt(item.quantity) - 1;
     const email = item.email;
     const supplier = item.supplier;
-    const confirm = window.confirm("Are you sure you want to delivered?");
-    if (!confirm) {
-      return;
-    }
+
     if (quantity === -1) {
       return toast.error("Out of Stock!");
     }
-
-    const card = {
-      name,
-      image,
-      description,
-      price,
-      quantity,
-      supplier,
-      email,
-    };
-    fetch(`https://cars-warehouse.herokuapp.com/cars/${id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(card),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) {
-          toast.success("1 Inventory Delivered Successfully");
-          setIsReload(!isReload);
-        }
-      });
+    // confirm dialog when user click on delivered button
+    Swal.fire({
+      title: "Are you sure you delivered?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delivered!",
+    }).then((result) => {
+      if (result.value) {
+        // if user click on delivered button
+        const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
+        const data = {
+          name,
+          image,
+          description,
+          price,
+          quantity,
+          email,
+          supplier,
+        };
+        fetch(url, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.error) {
+              toast.error(data.error);
+            } else {
+              toast.success("1 Inventory Delivered!");
+              setIsReload(!isReload);
+            }
+          });
+      }
+    });
   };
 
   const handleQuantityUpdate = (e) => {
@@ -74,38 +87,57 @@ function InventoryDetails() {
     const quantity = inputValue + parseInt(item.quantity);
     const email = item.email;
     const supplier = item.supplier;
-    const confirm = window.confirm("Are you sure you want to update?");
-    if (!confirm) {
-      return;
-    }
     if (!inputValue) {
-      return toast.error("Please add the product quantity first!");
+      return toast.error("Please Add The Product Quantity First!", {
+        autoClose: 5000,
+      });
     }
     // negative input value
     if (inputValue < 0) {
-      return toast.error("Please add positive quantity!");
-    }
-    const card = {
-      name,
-      image,
-      description,
-      price,
-      quantity,
-      supplier,
-      email,
-    };
-    fetch(`https://cars-warehouse.herokuapp.com/cars/${id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(card),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast.success(`${inputValue} Inventory Added Successfully!`);
-        setIsReload(!isReload);
+      return toast.error("Please Add Positive Quantity!", {
+        autoClose: 5000,
       });
+    }
+
+    // confirm dialog when user click on update button
+    Swal.fire({
+      title: "Are you sure you to update?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, update!",
+    }).then((result) => {
+      if (result.value) {
+        // if user click on update button
+        const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
+        const data = {
+          name,
+          image,
+          description,
+          price,
+          quantity,
+          email,
+          supplier,
+        };
+        fetch(url, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.error) {
+              toast.error(data.error);
+            } else {
+              toast.success(`${inputValue} Inventory Added Successfully!`);
+              setIsReload(!isReload);
+            }
+          });
+      }
+    });
     e.target.reset();
   };
 

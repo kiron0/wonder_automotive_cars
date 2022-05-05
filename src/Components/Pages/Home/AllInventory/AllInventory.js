@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import Swal from "sweetalert2";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 import ManageInventory from "../ManageInventory/ManageInventory";
 import "../ManageInventory/ManageInventory.css";
@@ -13,20 +14,34 @@ const AllInventory = () => {
   }, []);
 
   const handleDeleteInventories = (id) => {
-    const confirm = window.confirm("Are you sure you want to delete");
-    if (!confirm) {
-      return;
-    }
-    fetch(`https://cars-warehouse.herokuapp.com/cars/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.deletedCount > 0) {
-          toast.success("Inventory Deleted Successfully");
-        }
-        setInventories(inventories.filter((inventory) => inventory._id !== id));
-      });
+    // confirm dialog when user click on delete button
+    Swal.fire({
+      title: "Are you sure you to delete?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.value) {
+        // if user click on delete button
+        const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.message) {
+              toast.error(data.message);
+            } else {
+              toast.success("Deleted Successfully!");
+              setInventories(
+                inventories.filter((inventory) => inventory._id !== id)
+              );
+            }
+          });
+      }
+    });
   };
 
   return (

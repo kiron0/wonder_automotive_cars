@@ -11,7 +11,7 @@ const Banner = () => {
       <section className="custom-padding about-us">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <div className="title">
                 <h3>
                   About{" "}
@@ -24,15 +24,15 @@ const Banner = () => {
                   responsive website
                 </p>
                 <p>
-                Wonder Automotive Cars is not only a hub where buyers and sellers can
-                  interact, it is also a comprehensive automotive portal with a
-                  forum dedicated to all automotive discussions, a blog that
-                  keeps the users up to date with the latest happenings in the
-                  automotive industry.
+                  Wonder Automotive Cars is not only a hub where buyers and
+                  sellers can interact, it is also a comprehensive automotive
+                  portal with a forum dedicated to all automotive discussions, a
+                  blog that keeps the users up to date with the latest
+                  happenings in the automotive industry.
                 </p>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <img
                 className="center-block img-responsive"
                 data-wow-delay="0ms"
@@ -43,7 +43,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="row margin-top-20">
-            <div className="col-md-3 col-xs-12 col-sm-6">
+            <div className="col-lg-3 col-md-4 col-xs-12 col-sm-6">
               <div className="services-grid">
                 <div className="icons">
                   <i className="flaticon-key">
@@ -57,7 +57,7 @@ const Banner = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-3 col-xs-12 col-sm-6">
+            <div className="col-lg-3 col-md-4 col-xs-12 col-sm-6">
               <div className="services-grid">
                 <div className="icons">
                   <i className="flaticon-engine-2">
@@ -71,7 +71,7 @@ const Banner = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-3 col-xs-12 col-sm-6">
+            <div className="col-lg-3 col-md-4 col-xs-12 col-sm-6">
               <div className="services-grid">
                 <div className="icons">
                   <i className="flaticon-security">
@@ -85,7 +85,7 @@ const Banner = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-3 col-xs-12 col-sm-6">
+            <div className="col-lg-3 col-md-4 col-xs-12 col-sm-6">
               <div className="services-grid">
                 <div className="icons">
                   <i className="flaticon-disc-brake-1">
