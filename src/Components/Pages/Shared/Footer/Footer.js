@@ -25,7 +25,8 @@ const Footer = () => {
                 <div className="widget">
                   <div className="logo">
                     {" "}
-                    <img alt="" src="images/logo.png" />{" "}
+                    <h2>Wonder Automotive Cars</h2>
+                    {/* <img alt="" src="images/logo.png" />{" "} */}
                   </div>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -116,7 +117,7 @@ const Footer = () => {
                     <form onSubmit={defaultForm}>
                       <input
                         className=""
-                        value="Enter your email address"
+                        placeholder="Enter your email address"
                         type="text"
                       />
                       <input

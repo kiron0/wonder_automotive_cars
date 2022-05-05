@@ -24,7 +24,7 @@ const Banner = () => {
                   responsive website
                 </p>
                 <p>
-                  Carspot is not only a hub where buyers and sellers can
+                Wonder Automotive Cars is not only a hub where buyers and sellers can
                   interact, it is also a comprehensive automotive portal with a
                   forum dedicated to all automotive discussions, a blog that
                   keeps the users up to date with the latest happenings in the
