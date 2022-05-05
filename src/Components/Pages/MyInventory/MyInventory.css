@@ -1,0 +1,26 @@
+.my-inventory-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  margin: 0 auto;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 490px) {
+  .my-inventory-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .my-inventory-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .my-inventory-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

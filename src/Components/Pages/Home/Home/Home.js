@@ -28,7 +28,7 @@ const Home = () => {
       <Banner></Banner>
       <div className="featured">
         <h1>
-          Our Latest <span class="heading-color"> Featured</span> Cars
+          Our Latest <span className="heading-color"> Featured</span> Cars
         </h1>
       </div>
       <HomeInventory></HomeInventory>

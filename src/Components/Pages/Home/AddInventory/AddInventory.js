@@ -1,5 +1,5 @@
-import { TextField, Input, Button } from "@mui/material";
-import React, { useState } from "react";
+import { TextField, Button } from "@mui/material";
+import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-hot-toast";
 import { auth } from "../../../../Firebase/Firebase.init";
@@ -8,35 +8,39 @@ import "./AddInventory.css";
 
 const AddInventory = () => {
   const [user] = useAuthState(auth);
-  const [name, setName] = useState("");
-  const [email] = useState(user?.email);
-  const [description, setDescription] = useState("");
-  const [supplier, setSupplier] = useState("");
-  const [price, setPrice] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [image, setImage] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!image) {
-      return;
-    }
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("description", description);
-    formData.append("supplier", supplier);
-    formData.append("price", price);
-    formData.append("quantity", quantity);
-    formData.append("image", image);
-    formData.append("email", email);
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const description = e.target.description.value;
+    const price = e.target.price.value;
+    const quantity = e.target.quantity.value;
+    const email = e.target.email.value;
+    const supplier = e.target.supplier.value;
+    const item = {
+      name,
+      image,
+      description,
+      price,
+      quantity,
+      supplier,
+      email,
+    };
     fetch("https://cars-warehouse.herokuapp.com/cars", {
       method: "POST",
-      body: formData,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(item),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          toast.success("Inventory added successfully");
+          toast.success("Inventory Added Successfully!", {
+            position: "top-center",
+            autoClose: 3000,
+          });
         }
       })
       .catch((error) => {
@@ -69,7 +73,17 @@ const AddInventory = () => {
           variant="outlined"
           name="name"
           required
-          onChange={(e) => setName(e.target.value)}
+        />
+        <br />
+        <br />
+        <TextField
+          sx={{ width: "90%" }}
+          id="outlined-basic"
+          label="Image Link"
+          variant="outlined"
+          name="image"
+          required
+          type="text"
         />
         <br />
         <br />
@@ -80,7 +94,6 @@ const AddInventory = () => {
           variant="outlined"
           name="description"
           required
-          onChange={(e) => setDescription(e.target.value)}
         />
         <br />
         <br />
@@ -91,7 +104,6 @@ const AddInventory = () => {
           variant="outlined"
           name="supplier"
           required
-          onChange={(e) => setSupplier(e.target.value)}
         />
         <br />
         <br />
@@ -102,7 +114,6 @@ const AddInventory = () => {
           variant="outlined"
           name="price"
           required
-          onChange={(e) => setPrice(e.target.value)}
           type="number"
         />
         <br />
@@ -114,26 +125,11 @@ const AddInventory = () => {
           variant="outlined"
           name="quantity"
           required
-          onChange={(e) => setQuantity(e.target.value)}
           type="number"
         />
         <br />
         <br />
-        <Input
-          sx={{ width: "90%" }}
-          label="Upload Image"
-          accept="image/*"
-          name="image"
-          type="file"
-          onChange={(e) => setImage(e.target.files[0])}
-        />{" "}
-        <br />
-        <br />
-        <Button
-          variant="contained"
-          type="submit"
-          className="add-btn"
-        >
+        <Button variant="contained" type="submit" className="add-btn">
           Add Inventory
         </Button>
       </form>

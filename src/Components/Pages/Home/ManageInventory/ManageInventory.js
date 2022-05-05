@@ -1,21 +1,13 @@
 import React from "react";
 import "./ManageInventory.css";
-import { Button, Modal } from "react-bootstrap";
 import trash from "../../../Assets/logo/trash-2.png";
+import edit from "../../../Assets/logo/edit.png";
 
-function ManageInventory({
-  inventories,
-  handleDeleteInventories,
-  show,
-  setShow,
-}) {
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+function ManageInventory({ inventories, handleDeleteInventories }) {
   return (
     <div className="admin-vol-list">
       <h5 className="display-5 py-lg-4 pb-2 text-center">
-        Manage Inventory List
+        Manage All Inventory List
       </h5>
       <div className="admin-content">
         <table>
@@ -39,27 +31,16 @@ function ManageInventory({
                   <td>{inventory.quantity}</td>
                   <td>{inventory.supplier}</td>
                   <td>
-                    <button className="btn btn-danger" onClick={handleShow}>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handleDeleteInventories(inventory._id)}
+                    >
                       <img src={trash} alt="delete" style={{ width: "21px" }} />
                     </button>
+                    <button className="edit-btn2">
+                    <img src={edit} alt="update" style={{ width: "21px" }} />
+                    </button>
                   </td>
-                  <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                      <Modal.Title>Attention!</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Are you want to delete this?</Modal.Body>
-                    <Modal.Footer>
-                      <Button variant="warning" onClick={handleClose}>
-                        Close
-                      </Button>
-                      <Button
-                        variant="danger"
-                        onClick={() => handleDeleteInventories(inventory._id)}
-                      >
-                        Confirm
-                      </Button>
-                    </Modal.Footer>
-                  </Modal>
                 </tr>
               ))
             ) : (

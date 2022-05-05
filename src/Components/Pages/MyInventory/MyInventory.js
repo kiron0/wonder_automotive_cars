@@ -5,13 +5,14 @@ import { useNavigate } from "react-router-dom";
 import "./MyInventory.css";
 import { auth } from "../../../Firebase/Firebase.init";
 import axios from "axios";
-import Loading from "../Shared/Loading/Loading";
 import { toast } from "react-hot-toast";
+import UserInventory from "../UserInventory/UserInventory";
 
 const MyInventory = () => {
   const [user] = useAuthState(auth);
   const [myInventories, setMyInventories] = useState([]);
   const navigate = useNavigate();
+  const [isReload, setIsReload] = useState(false);
 
   // get my inventories
   useEffect(() => {
@@ -33,12 +34,14 @@ const MyInventory = () => {
       }
     };
     getOrders();
-  }, [user]);
+  }, [user, isReload]);
 
   if (myInventories.length === 0) {
     return (
       <div>
-        <Loading></Loading>
+        <div className="alert alert-warning text-center" role="alert">
+          You don't have any items in your inventory.
+        </div>
       </div>
     );
   }
@@ -48,7 +51,7 @@ const MyInventory = () => {
     if (!confirm) {
       return;
     }
-    const url = `https://enigmatic-eyrie-33917.herokuapp.com/product/${id}`;
+    const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -56,24 +59,35 @@ const MyInventory = () => {
       .then((data) => {
         if (data) {
           toast.success("Deleted successfully");
-          const newInventories = myInventories.filter(
-            (inventory) => inventory.id !== id
+          setMyInventories(
+            myInventories.filter((inventory) => inventory.id !== id)
           );
-          setMyInventories(newInventories);
+          setIsReload(!isReload);
         }
       });
   };
 
   return (
-    <div className="w-50 mx-auto">
-      <h2>Your Total Added Inventories: {myInventories.length}</h2>
-      {myInventories.map((myInventory) => (
-        <div key={myInventory._id}>
-          <p>
-            {myInventory.email} : {myInventory.name}
-          </p>
-        </div>
-      ))}
+    <div>
+      <h2 className="text-center">
+        Your Total Added Inventories: {myInventories.length}
+      </h2>
+      <div className="my-inventory-container">
+        {myInventories.map((myInventory) => (
+          <UserInventory
+            key={myInventory._id}
+            myInventory={myInventory}
+            handleDelete={handleDelete}
+          ></UserInventory>
+        ))}
+      </div>
+      <button
+        onClick={() => navigate("/add-inventory")}
+        style={{ marginTop: "5rem", marginBottom: "5rem" }}
+        className="btn btn-primary mx-auto d-block"
+      >
+        Add More Item
+      </button>
     </div>
   );
 };

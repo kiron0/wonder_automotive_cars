@@ -12,14 +12,14 @@ const InventoryCard = ({ inventoryCard }) => {
 
   return (
     <div className="inventory-card">
-      <img src={`data:image/png;base64,${image}`} alt="" />
+      <img src={image} alt="" />
       <div className="info">
         <h3>${price}</h3>
         <h4>{name}</h4>
         <p>{quantity} cars</p>
         <p>
-          {description.slice(0, 80)}
-          {description.length > 100 && (
+          {description?.slice(0, 80)}
+          {description?.length > 100 && (
             <span title={`${description}`}>...read more</span>
           )}
         </p>

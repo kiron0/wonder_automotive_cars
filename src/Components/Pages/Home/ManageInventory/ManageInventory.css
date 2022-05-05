@@ -1,4 +1,4 @@
- .admin-controls {
+.admin-controls {
   max-width: fit-content;
 }
 
@@ -94,6 +94,19 @@
 .admin-add-event .form-control::-webkit-datetime-edit-fields-wrapper {
   color: #585858;
 }
+
+.edit-btn2 {
+  margin-left: 5px;
+  background-color: #40c740 !important;
+  border: none;
+  height: 2.1rem;
+  border-radius: 0.2rem;
+}
+
+.edit-btn2:hover {
+  background-color: #208320 !important;
+}
+
 @media (max-width: 767px) {
   .admin-content {
     overflow-x: scroll;
