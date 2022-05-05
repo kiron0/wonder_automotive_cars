@@ -136,7 +136,9 @@ function InventoryDetails() {
               aria-describedby="basic-addon2"
               type="number"
             />
-            <Button variant="primary" type="submit">Update</Button>
+            <Button variant="primary" type="submit">
+              Update
+            </Button>
           </InputGroup>
         </form>
       </Card>

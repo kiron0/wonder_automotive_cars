@@ -1,12 +1,78 @@
 .inventory-card {
-  border-radius: 0.5rem;
-  background: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
+  width: 370px;
+  height: 420px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  border: none;
+  /* box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); */
 }
-
+.inventory-card:hover {
+  transform: translateY(20px);
+}
+.inventory-card:hover:before {
+  opacity: 1;
+}
+.inventory-card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.inventory-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
 .inventory-card img {
-  border-radius: 0.5rem;
-  max-height: 350px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+.inventory-card .info {
+  margin-top: 5.5rem;
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+.inventory-card .info h1 {
+  margin: 0px;
+}
+.inventory-card .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.inventory-card .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.inventory-card .info button:hover {
+  background: dodgerblue;
+  color: white;
 }

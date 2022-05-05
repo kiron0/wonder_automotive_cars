@@ -14,7 +14,7 @@ const HomeInventory = () => {
     );
   }
   return (
-    <div style={{marginBottom: '100px'}}>
+    <div style={{ marginBottom: "100px" }}>
       <span className="inventoryCards-container container">
         {inventoryCards.slice(0, 6).map((inventoryCard) => (
           <InventoryCard

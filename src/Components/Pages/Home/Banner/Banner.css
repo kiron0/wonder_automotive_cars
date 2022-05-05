@@ -13,9 +13,6 @@
   background-color: #f6f6f6;
 }
 
-.title h3 {
-  margin: 0;
-}
 .center-block {
   display: block;
   margin-right: auto;
@@ -30,6 +27,7 @@
 
 .about-us .title {
   margin-bottom: 30px;
+  margin-left: 0;
 }
 .about-us .content p {
   font-size: 18px;
@@ -45,6 +43,7 @@
   right: 0;
   width: 59px;
 }
+
 .about-us .title h3 {
   color: #222;
   font-size: 28px;
