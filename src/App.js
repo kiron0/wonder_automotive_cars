@@ -16,6 +16,7 @@ import AllInventory from "./Components/Pages/Home/AllInventory/AllInventory";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 import MyInventory from "./Components/Pages/MyInventory/MyInventory";
 import ScrollButton from "./Components/Pages/Shared/ScrollButton/ScrollButton";
+import UpdateInventory from "./Components/Pages/Shared/UpdateInventory/UpdateInventory";
 
 function App() {
   return (
@@ -37,7 +38,15 @@ function App() {
         ></Route>
         <Route
           path="/inventory/:id"
-          element={<InventoryDetails></InventoryDetails>}
+          element={
+            <RequireAuth>
+              <InventoryDetails></InventoryDetails>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/update/:id"
+          element={<UpdateInventory></UpdateInventory>}
         ></Route>
         <Route
           path="/manage"

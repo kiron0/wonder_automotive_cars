@@ -2,6 +2,7 @@ import React from "react";
 import trash from "../../Assets/logo/trash-2.png";
 import edit from "../../Assets/logo/edit.png";
 import "./UserInventory.css";
+import { Link } from "react-router-dom";
 
 function UserInventory({ myInventory, handleDelete }) {
   const { _id, image, name, supplier, description, price } = myInventory;
@@ -25,13 +26,15 @@ function UserInventory({ myInventory, handleDelete }) {
             style={{ width: "26px", position: "relative" }}
           />
         </button>
-        <button className="edit-btn">
-          <img
-            src={edit}
-            alt="update"
-            style={{ width: "26px", position: "relative" }}
-          />
-        </button>
+        <Link to={`/update/${_id}`}>
+          <button className="edit-btn">
+            <img
+              src={edit}
+              alt="update"
+              style={{ width: "26px", position: "relative" }}
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );

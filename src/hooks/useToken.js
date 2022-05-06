@@ -9,7 +9,9 @@ const useToken = (user) => {
       if (email) {
         const { data } = await axios.post(
           "https://cars-warehouse.herokuapp.com/login",
-          { email }
+          {
+            email,
+          }
         );
         localStorage.setItem("accessToken", data.accessToken);
         setToken(data.accessToken);

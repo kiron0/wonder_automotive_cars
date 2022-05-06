@@ -2,6 +2,7 @@ import React from "react";
 import "./ManageInventory.css";
 import trash from "../../../Assets/logo/trash-2.png";
 import edit from "../../../Assets/logo/edit.png";
+import { Link } from "react-router-dom";
 
 function ManageInventory({ inventories, handleDeleteInventories }) {
   return (
@@ -37,9 +38,15 @@ function ManageInventory({ inventories, handleDeleteInventories }) {
                     >
                       <img src={trash} alt="delete" style={{ width: "21px" }} />
                     </button>
-                    <button className="edit-btn2">
-                    <img src={edit} alt="update" style={{ width: "21px" }} />
-                    </button>
+                    <Link to={`/update/${inventory._id}`}>
+                      <button className="edit-btn2">
+                        <img
+                          src={edit}
+                          alt="update"
+                          style={{ width: "21px" }}
+                        />
+                      </button>
+                    </Link>
                   </td>
                 </tr>
               ))

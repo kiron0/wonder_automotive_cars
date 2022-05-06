@@ -6,7 +6,7 @@ import "./Blog.css";
 function Blog() {
   return (
     <>
-      <div className="container mx-auto ">
+      <div className="container mx-auto mb-5">
         <PageTitle title="Blog"></PageTitle>
         <div>
           <h2 className="fw-normal text-center mb-5 mt-4 fst-italic font-normal">

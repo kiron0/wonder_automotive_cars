@@ -1,0 +1,66 @@
+.logos {
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+
+.car-logo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin: 50px 100px;
+}
+
+.car-logo img {
+  width: 120px;
+}
+
+.logos p {
+  color: rgb(156, 7, 7);
+}
+
+.logos h2::after {
+  background-color: #242424;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 59px;
+  margin: 0 auto;
+}
+
+.logos h2 {
+  color: #222;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 2;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.logos h2::before {
+  background-color: #242424;
+  bottom: 6px;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 99px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 490px) {
+  .car-logo {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+    margin: 0 auto;
+  }
+}

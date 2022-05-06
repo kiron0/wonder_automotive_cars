@@ -4,4 +4,7 @@
 }
 .edit-btn {
   background-color: #40c740 !important;
+  border: none;
+  height: 2.9rem;
+  border-radius: 0.2rem;
 }

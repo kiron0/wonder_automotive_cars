@@ -17,7 +17,7 @@ function InventoryDetails() {
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id, isReload]);
-  if (item === {}) {
+  if (!item.image) {
     return (
       <div>
         <Loading></Loading>
@@ -38,12 +38,12 @@ function InventoryDetails() {
     }
     // confirm dialog when user click on delivered button
     Swal.fire({
-      title: "Are you sure you delivered?",
+      text: "Are you sure you want to delivered?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delivered!",
+      confirmButtonText: "Yes, Delivered!",
     }).then((result) => {
       if (result.value) {
         // if user click on delivered button
@@ -101,12 +101,12 @@ function InventoryDetails() {
 
     // confirm dialog when user click on update button
     Swal.fire({
-      title: "Are you sure you to update?",
+      text: "Are you sure you want to update?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, update!",
+      confirmButtonText: "Yes, Update!",
     }).then((result) => {
       if (result.value) {
         // if user click on update button

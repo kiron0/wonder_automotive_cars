@@ -107,8 +107,18 @@
   background-color: #208320 !important;
 }
 
+@media screen and (max-width: 490px) {
+  .edit-btn2{
+    margin-left: 0px;
+  }
+  .admin-content button{
+    display: flex;
+  }
+}
+
 @media (max-width: 767px) {
   .admin-content {
     overflow-x: scroll;
   }
 }
+

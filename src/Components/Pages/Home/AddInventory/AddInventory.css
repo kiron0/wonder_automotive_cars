@@ -8,25 +8,23 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 .inventory-container {
-  background: #fff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 1rem;
   border-radius: 0.3rem;
   width: 30%;
   margin: 10rem auto;
 }
 
-.inventory-container form{
+.inventory-container form {
   margin-left: 3rem;
 }
 
-.add-btn{
+.add-btn {
   width: 35%;
   margin: 0 auto;
 }
@@ -36,10 +34,10 @@ input[type=number] {
     margin: 1rem auto;
     width: 90%;
   }
-  .inventory-container form{
+  .inventory-container form {
     margin-left: 1rem;
   }
-  .add-btn{
+  .add-btn {
     width: 45%;
     margin: 0 auto;
   }
@@ -54,7 +52,7 @@ input[type=number] {
 
 @media screen and (min-width: 992px) {
   .inventory-container {
-    margin: 4rem auto;
+    margin: 2rem auto;
     width: 30%;
   }
 }

@@ -16,12 +16,12 @@ const AllInventory = () => {
   const handleDeleteInventories = (id) => {
     // confirm dialog when user click on delete button
     Swal.fire({
-      title: "Are you sure you to delete?",
+      text: "Are you sure you want to delete?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
+      confirmButtonText: "Yes, Delete!",
     }).then((result) => {
       if (result.value) {
         // if user click on delete button

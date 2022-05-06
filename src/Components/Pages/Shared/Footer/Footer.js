@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 import Google from "../../../Assets/googleplay.png";
 import Apple from "../../../Assets/appstore.png";
 import {
@@ -14,6 +15,14 @@ const Footer = () => {
 
   const defaultForm = (e) => {
     e.preventDefault();
+    const email = e.target.email.value;
+    Swal.fire({
+      title: "Thank you for sign up!",
+      text: `We will keep you updated with our latest news in ${email}'s inbox.`,
+      icon: "success",
+      confirmButtonText: "Close",
+    });
+    e.target.reset();
   };
   return (
     <>
@@ -34,10 +43,14 @@ const Footer = () => {
                   </p>
                   <ul className="apps-downloads">
                     <li>
-                      <img src={Google} alt="" />
+                      <a href="!#">
+                        <img src={Google} alt="" />
+                      </a>
                     </li>
                     <li>
-                      <img src={Apple} alt="" />
+                      <a href="!#">
+                        <img src={Apple} alt="" />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -119,6 +132,8 @@ const Footer = () => {
                         className=""
                         placeholder="Enter your email address"
                         type="text"
+                        name="email"
+                        required
                       />
                       <input
                         className="submit-btn"
@@ -131,7 +146,8 @@ const Footer = () => {
                 </div>
                 <div className="copyright">
                   <p>
-                    &copy; Copyright {year} Wonder Automotive Cars || All rights
+                    &copy; Copyright {year}{" "}
+                    <strong>Wonder Automotive Cars</strong> || All rights
                     reserved.
                   </p>
                 </div>

@@ -50,12 +50,12 @@ const MyInventory = () => {
   const handleDelete = (id) => {
     // confirm dialog when user click on delete button
     Swal.fire({
-      title: "Are you sure you to delete?",
+      text: "Are you sure you to delete?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
+      confirmButtonText: "Yes, Delete!",
     }).then((result) => {
       if (result.value) {
         // if user click on delete button
@@ -80,7 +80,7 @@ const MyInventory = () => {
   };
   return (
     <div>
-      <h2 className="text-center">
+      <h2 className="text-center py-5">
         Your Total Added Inventories: {myInventories.length}
       </h2>
       <div className="my-inventory-container">
