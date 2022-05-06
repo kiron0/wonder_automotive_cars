@@ -50,9 +50,9 @@ const AddInventory = () => {
   };
 
   return (
-    <div className="inventory-container">
+    <div className="inventory-container add">
       <PageTitle title="Add Item"></PageTitle>
-      <h2 className="py-4 text-center">Add an Inventory</h2>
+      <h2 className="display-5 text-center py-4">Add an Inventory</h2>
       <form onSubmit={handleSubmit}>
         <TextField
           sx={{ width: "90%" }}

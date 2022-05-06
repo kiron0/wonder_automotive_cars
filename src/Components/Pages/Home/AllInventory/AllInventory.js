@@ -45,7 +45,7 @@ const AllInventory = () => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid all-invent">
       <PageTitle title="Manage Items"></PageTitle>
       <div className="vn-admin-dashboard px-lg-5 px-0">
         <div className="row">

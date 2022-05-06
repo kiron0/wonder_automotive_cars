@@ -29,6 +29,10 @@ input[type="number"] {
   margin: 0 auto;
 }
 
+.add h2{
+  margin-top: -1rem !important;
+}
+
 @media screen and (max-width: 490px) {
   .inventory-container {
     margin: 1rem auto;

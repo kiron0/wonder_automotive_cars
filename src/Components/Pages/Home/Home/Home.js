@@ -10,6 +10,7 @@ import Partners from "../Partners/Partners";
 const Home = () => {
   return (
     <>
+      <div className="home">
       <PageTitle title="Home" />
       <div
         id="carouselExampleCaptions"
@@ -26,18 +27,6 @@ const Home = () => {
                 Register today for your next event at our Convention Center. And
                 take advantage of all the opportunities
               </p>
-              <a
-                href="https://programming-hero.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary fw-bold mb-5"
-                style={{
-                  borderRadius: "5px",
-                  padding: "13px 60px",
-                }}
-              >
-                Book Now
-              </a>
             </div>
           </div>
           <div className="carousel-item">
@@ -49,18 +38,6 @@ const Home = () => {
                 Only we have the best facilities in the world. Which no one else
                 can give.We are always at your service.
               </p>
-              <a
-                href="https://programming-hero.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary fw-bold mb-5"
-                style={{
-                  borderRadius: "5px",
-                  padding: "13px 60px",
-                }}
-              >
-                Learn More
-              </a>
             </div>
           </div>
           <div className="carousel-item">
@@ -72,18 +49,6 @@ const Home = () => {
                 We have a lot of companies in the world who helping us We took
                 some moments with them in the photo gallery
               </p>
-              <a
-                href="https://programming-hero.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary fw-bold mb-5"
-                style={{
-                  borderRadius: "5px",
-                  padding: "13px 60px",
-                }}
-              >
-                Browse Gallery
-              </a>
             </div>
           </div>
           <div className="carousel-item">
@@ -95,19 +60,6 @@ const Home = () => {
                 We have a lot of companies in the world who helping us We took
                 some moments with them in the photo gallery
               </p>
-              <a
-                href="https://programming-hero.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn text-primary fw-bold mb-5"
-                style={{
-                  backgroundColor: "#ffffff",
-                  borderRadius: "5px",
-                  padding: "13px 60px",
-                }}
-              >
-                Browse Car
-              </a>
             </div>
           </div>
         </div>
@@ -135,6 +87,7 @@ const Home = () => {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
+      </div>
       </div>
       <Banner></Banner>
       <div className="featured">

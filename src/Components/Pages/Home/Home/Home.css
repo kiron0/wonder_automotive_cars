@@ -1,5 +1,12 @@
-.home-carousel {
-  position: relative;
+.home {
+  top: -2rem !important;
+}
+
+.home-carousel{
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #000 !important;
+  border: none !important;
 }
 
 .featured h1 {
@@ -14,6 +21,10 @@
   position: relative;
   text-transform: capitalize;
   z-index: 2;
+}
+
+.carousel-caption{
+  margin-bottom: 18rem;
 }
 
 .featured h1::after {
@@ -101,7 +112,7 @@
   background-size: cover;
   width: 100%;
 }
-.carousel-item:nth-child(3) img {
+.carousel-item:nth-child(4) img {
   background-image: url("../../../Assets/banner-4.jpg");
   height: 800px;
   background-position: center;
@@ -110,12 +121,22 @@
   width: 100%;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  /* Use to adjust size of icons */
+  width: 3rem;
+  height: 3rem;
+}
+
 @media screen and (max-width: 490px) {
   .carousel-item:nth-child(1) img,
   .carousel-item:nth-child(2) img,
   .carousel-item:nth-child(3) img,
   .carousel-item:nth-child(4) img {
     height: 680px;
+  }
+  .carousel-caption{
+    margin-bottom: 0;
   }
 }
 

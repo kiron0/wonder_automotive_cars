@@ -2,6 +2,10 @@
   max-width: fit-content;
 }
 
+.all-invent {
+  margin-bottom: 5rem;
+}
+
 .admin-controls .btn {
   font-size: 14px;
   line-height: 19px;
@@ -34,7 +38,7 @@
 .admin-content table th,
 .admin-content table td {
   padding: 20px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
 }
 .admin-content table td {
@@ -108,11 +112,15 @@
 }
 
 @media screen and (max-width: 490px) {
-  .edit-btn2{
+  .edit-btn2 {
     margin-left: 0px;
   }
-  .admin-content button{
+  .admin-content button {
     display: flex;
+  }
+  .admin-content table th,
+  .admin-content table td {
+    font-size: 14px;
   }
 }
 
@@ -121,4 +129,3 @@
     overflow-x: scroll;
   }
 }
-

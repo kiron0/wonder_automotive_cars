@@ -80,9 +80,9 @@ const MyInventory = () => {
   };
   return (
     <div>
-      <h2 className="text-center py-5">
+      <h5 className="display-5 py-lg-4 pb-2 text-center">
         Your Total Added Inventories: {myInventories.length}
-      </h2>
+      </h5>
       <div className="my-inventory-container">
         {myInventories.map((myInventory) => (
           <UserInventory
