@@ -38,8 +38,8 @@ const Footer = () => {
                     {/* <img alt="" src="images/logo.png" />{" "} */}
                   </div>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur et dolor eget erat fringilla port.
+                  Wonder Automotive Cars have the best facilities in the world, which no one
+                    else can give you most probably. We are always best at your service.
                   </p>
                   <ul className="apps-downloads">
                     <li>
@@ -136,7 +136,7 @@ const Footer = () => {
                         required
                       />
                       <input
-                        className="submit-btn"
+                        className="btn btn-danger submit-btn"
                         name="submit"
                         value="Submit"
                         type="submit"

@@ -1,4 +1,4 @@
-.admin-controls {
+.manage-inventory {
   max-width: fit-content;
 }
 
@@ -6,7 +6,7 @@
   margin-bottom: 5rem;
 }
 
-.admin-controls .btn {
+.manage-inventory .btn {
   font-size: 14px;
   line-height: 19px;
   color: #111111;
@@ -15,51 +15,51 @@
   align-items: center;
   padding: 10px;
 }
-.admin-controls .btn img {
+.manage-inventory .btn img {
   margin-right: 5px;
 }
-.admin-controls .btn:focus {
+.manage-inventory .btn:focus {
   color: var(--primary);
 }
 
-.admin-content {
+.inventory-content {
   width: 100% !important;
   padding: 23px 18px;
   background: #ffffff;
   border-radius: 20px;
 }
-.admin-content table {
+.inventory-content table {
   width: 100%;
   border-collapse: collapse;
 }
-.admin-content table thead th {
+.inventory-content table thead th {
   background: #f5f6fa;
 }
-.admin-content table th,
-.admin-content table td {
+.inventory-content table th,
+.inventory-content table td {
   padding: 20px;
   font-size: 16px;
   line-height: 16px;
 }
-.admin-content table td {
+.inventory-content table td {
   padding: 10px 20px;
 }
-.admin-content table th {
+.inventory-content table th {
   color: #686868;
   font-weight: 400;
 }
-.admin-content table td {
+.inventory-content table td {
   color: #000;
   font-weight: 500;
 }
-.admin-content table thead th:first-child {
+.inventory-content table thead th:first-child {
   border-radius: 13px 0 0 13px;
 }
-.admin-content table thead th:last-child {
+.inventory-content table thead th:last-child {
   border-radius: 0 13px 13px 0;
 }
 
-.admin-content table .btn {
+.inventory-content table .btn {
   padding: 5px;
   padding-top: 3px;
 }
@@ -69,7 +69,7 @@
   text-transform: capitalize;
 }
 
-.admin-add-event .admin-content {
+.admin-add-event .inventory-content {
   padding: 34px;
 }
 .admin-add-event label {
@@ -135,11 +135,11 @@
     width: 40%;
   }
 
-  .admin-content button {
+  .inventory-content button {
     display: flex;
   }
-  .admin-content table th,
-  .admin-content table td {
+  .inventory-content table th,
+  .inventory-content table td {
     font-size: 14px;
   }
   .buttons {
@@ -150,7 +150,7 @@
 }
 
 @media (max-width: 767px) {
-  .admin-content {
+  .inventory-content {
     overflow-x: scroll;
   }
 }

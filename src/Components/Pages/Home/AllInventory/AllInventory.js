@@ -52,7 +52,7 @@ const AllInventory = () => {
       <div className="vn-admin-dashboard px-lg-5 px-0">
         <div className="row">
           <div className="col-lg-3">
-            <div className="admin-controls py-3 d-flex flex-lg-column"></div>
+            <div className="manage-inventory py-3 d-flex flex-lg-column"></div>
           </div>
           <div className="col-lg-12">
             {
@@ -65,7 +65,7 @@ const AllInventory = () => {
           <button
             onClick={() => navigate("/add-inventory")}
             style={{ marginTop: "5rem", marginBottom: "5rem" }}
-            className="btn btn-primary mx-auto d-block more-btn"
+            className="btn btn-danger mx-auto d-block more-btn"
           >
             Add More Item
           </button>

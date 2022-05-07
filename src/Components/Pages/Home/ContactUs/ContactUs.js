@@ -18,41 +18,42 @@ const ContactUs = () => {
 
   return (
     <div id="contact">
-      <div class="section-title">
-        <h2>Contact With Us</h2>
+      <div className="section-title">
+      <p className="text-center fs-5">Get in touch</p>
+      <h2 className="text-center title fs-1">Contact With <span className="heading-color">Us</span></h2>
       </div>
-      <div class="contact">
-        <div class="contact-left">
+      <div className="contact">
+        <div className="contact-left">
           <img
             src="https://cdn.dribbble.com/users/1484145/screenshots/14190807/contact_us_4x.png"
             alt=""
           />
         </div>
-        <div class="contact-right">
+        <div className="contact-right">
           <form onSubmit={handleContact}>
             <input
               type="text"
               placeholder="Your Name"
-              class="text-field"
+              className="text-field"
               name="name"
               required
             />
             <input
               type="email"
               placeholder="Your Email"
-              class="text-field"
+              className="text-field"
               name="email"
               required
             />
             <textarea
               placeholder="Your Message"
-              class="text-field"
+              className="text-field"
               id=""
               cols="30"
               rows="10"
               required
             ></textarea>
-            <button class="submit">Submit</button>
+            <button className="btn btn-danger submit">Submit</button>
           </form>
         </div>
       </div>

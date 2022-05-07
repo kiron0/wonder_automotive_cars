@@ -47,14 +47,13 @@
 }
 
 .text-field:hover {
-  border: 1px solid #e02c6d;
+  border: 1px solid red;
 }
 
 .submit {
   outline: 0;
   border: 0;
   padding: 10px 35px;
-  background-color: #e02c6d;
   font-weight: 600;
   color: #fff;
   font-size: 12px;
@@ -66,11 +65,51 @@
 
 .submit:hover {
   background-color: #fff;
-  border: 2px solid #e02c6d;
-  color: #000;
+  border: 2px solid red;
+  color: #000 !important;
+}
+
+.section-title h2::after {
+  background-color: #242424;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 59px;
+  margin: 0 auto;
+}
+
+.section-title h2 {
+  color: #222;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 2;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.section-title h2::before {
+  background-color: #242424;
+  bottom: 6px;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 99px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 490px) {
+  .contact-left img {
+    width: 100%;
+  }
   .banner-left,
   .submit {
     text-align: center;
@@ -87,5 +126,8 @@
   }
   .section-title h2 {
     font-size: 18px;
+  }
+  .text-field{
+    width: 90%;
   }
 }

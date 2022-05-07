@@ -72,11 +72,11 @@ const Header = () => {
             </li>
           )}
           {user?.email ? (
-            <button onClick={handleLogout} className="link btn btn-primary">
+            <button onClick={handleLogout} className="link btn btn-danger">
               Logout
             </button>
           ) : (
-            <CustomLink className="link btn btn-primary" to="/login">
+            <CustomLink className="link btn btn-danger" to="/login">
               Login
             </CustomLink>
           )}

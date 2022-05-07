@@ -80,7 +80,7 @@ const MyInventory = () => {
   };
   return (
     <div>
-      <h5 className="display-5 py-lg-4 pb-2 text-center">
+      <h5 className="py-lg-4 pb-2 text-center">
         Your Total Added Inventories: {myInventories.length}
       </h5>
       <div className="my-inventory-container">
@@ -95,7 +95,7 @@ const MyInventory = () => {
       <button
         onClick={() => navigate("/add-inventory")}
         style={{ marginTop: "5rem", marginBottom: "5rem" }}
-        className="btn btn-primary mx-auto d-block"
+        className="btn btn-danger mx-auto d-block"
       >
         Add More Item
       </button>

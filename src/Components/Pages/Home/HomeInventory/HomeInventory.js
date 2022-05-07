@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useInventory from "../../../../hooks/useInventory";
 import Loading from "../../Shared/Loading/Loading";
 import InventoryCard from "../InventoryCard/InventoryCard";
 import "./HomeInventory.css";
 
 const HomeInventory = () => {
+  const navigate = useNavigate();
   const [inventoryCards] = useInventory();
   if (inventoryCards.length === 0) {
     return (
@@ -23,6 +25,13 @@ const HomeInventory = () => {
           ></InventoryCard>
         ))}
       </span>
+      <button
+        onClick={() => navigate("/add-inventory")}
+        style={{ marginTop: "5rem", marginBottom: "5rem" }}
+        className="btn btn-danger mx-auto d-block"
+      >
+        Add More Item
+      </button>
     </div>
   );
 };

@@ -22,11 +22,9 @@ const Home = () => {
           <div className="carousel-item active">
             <img className="d-block" alt="" />
             <div className="carousel-caption d-md-block">
-              <h1>The perfect venue for your</h1>
-              <h1>next event</h1>
+              <h1>Find Your Dream Car</h1>
               <p>
-                Register today for your next event at our Convention Center. And
-                take advantage of all the opportunities
+              Our Wonder Automotive Cars experts inspect the car on over 200 checkpoints so you get complete satisfaction and peace.
               </p>
             </div>
           </div>
@@ -36,19 +34,18 @@ const Home = () => {
               <h1>We have many opportunities</h1>
               <h1>for you</h1>
               <p>
-                Only we have the best facilities in the world. Which no one else
-                can give.We are always at your service.
+                Only we have the best facilities in the world, which no one else
+                can give. We are always best at your service.
               </p>
             </div>
           </div>
           <div className="carousel-item">
             <img className="d-block" alt="" />
             <div className="carousel-caption d-md-block">
-              <h1>There are many companies</h1>
-              <h1>with us</h1>
+              <h1>Top car's comparison</h1>
+              <h1>for you</h1>
               <p>
-                We have a lot of companies in the world who helping us We took
-                some moments with them in the photo gallery
+              When it comes to buying a car, everyone has different priorities. Wonder Automotive Cars comes with excellent car comparison features that suits your needs.
               </p>
             </div>
           </div>

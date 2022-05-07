@@ -7,11 +7,11 @@ import { GrUpdate } from "react-icons/gr";
 
 function ManageInventory({ inventories, handleDeleteInventories }) {
   return (
-    <div className="admin-vol-list">
-      <h5 className="display-5 py-lg-0 pb-2 text-center">
+    <div>
+      <h5 className="py-lg-0 pb-2 text-center">
         Manage All Inventory List
       </h5>
-      <div className="admin-content">
+      <div className="inventory-content">
         <table>
           <thead>
             <tr>

@@ -20,6 +20,7 @@ import ScrollButton from "./Components/Pages/Shared/ScrollButton/ScrollButton";
 import UpdateInventory from "./Components/Pages/Shared/UpdateInventory/UpdateInventory";
 import { useEffect, useState } from "react";
 import { css } from "@emotion/react";
+import UserProfile from "./Components/Pages/Shared/UserProfile/UserProfile";
 
 const override = css`
   display: flex;
@@ -94,6 +95,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/user" element={<UserProfile></UserProfile>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <ScrollButton></ScrollButton>
