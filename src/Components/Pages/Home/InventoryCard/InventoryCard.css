@@ -73,6 +73,6 @@
   transition: 0.4s ease;
 }
 .inventory-card .info button:hover {
-  background: dodgerblue;
+  background: red;
   color: white;
 }

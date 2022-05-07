@@ -103,12 +103,12 @@ function InventoryDetails() {
 
     // confirm dialog when user click on update button
     Swal.fire({
-      text: "Are you sure you want to update?",
+      text: "Are you sure you want to restock?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Update!",
+      confirmButtonText: "Yes, Restock!",
     }).then((result) => {
       if (result.value) {
         // if user click on update button
@@ -165,7 +165,7 @@ function InventoryDetails() {
           <Card.Text className="fs-6 fw-bold">
             Supplier: {item.supplier}
           </Card.Text>
-          <Button variant="primary" onClick={deliveredInventory}>
+          <Button variant="danger" onClick={deliveredInventory}>
             Delivered
           </Button>
         </Card.Body>
@@ -178,7 +178,7 @@ function InventoryDetails() {
               aria-describedby="basic-addon2"
               type="number"
             />
-            <Button variant="primary" type="submit">
+            <Button variant="danger" type="submit">
               Restock
             </Button>
           </InputGroup>
