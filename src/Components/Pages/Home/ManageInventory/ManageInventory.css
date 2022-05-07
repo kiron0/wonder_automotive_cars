@@ -111,16 +111,41 @@
   background-color: #208320 !important;
 }
 
+.update-btn2 {
+  margin-left: 5px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #0cc9eb !important;
+  border: none;
+  height: 2.1rem;
+  border-radius: 0.2rem;
+}
+
+.more-btn{
+  width: 10%;
+}
+
 @media screen and (max-width: 490px) {
-  .edit-btn2 {
+  .edit-btn2, .update-btn2 {
     margin-left: 0px;
+    margin-top: 3px;
   }
+
+  .more-btn{
+    width: 40%;
+  }
+
   .admin-content button {
     display: flex;
   }
   .admin-content table th,
   .admin-content table td {
     font-size: 14px;
+  }
+  .buttons {
+    display: block;
+    align-items: center;
+    justify-content: center;
   }
 }
 

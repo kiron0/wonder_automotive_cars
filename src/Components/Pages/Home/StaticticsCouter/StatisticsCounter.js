@@ -18,7 +18,7 @@ const StatisticsCounter = () => {
             </div>
             <div className="number">
               <span>
-                <CountUp delay={5} end={1238} duration={1.5} />
+                <CountUp delay={5} end={1238} duration={5} />
               </span>
               +
             </div>
@@ -34,7 +34,7 @@ const StatisticsCounter = () => {
             </div>
             <div className="number">
               <span>
-                <CountUp delay={5} end={820} duration={1.5} />
+                <CountUp delay={5} end={820} duration={5} />
               </span>
               +
             </div>
@@ -48,7 +48,7 @@ const StatisticsCounter = () => {
             </div>
             <div className="number">
               <span>
-                <CountUp delay={5} end={1042} duration={1.5} />
+                <CountUp delay={5} end={1042} duration={5} />
               </span>
               +
             </div>
@@ -64,7 +64,7 @@ const StatisticsCounter = () => {
             </div>
             <div className="number">
               <span>
-                <CountUp delay={5} end={34} duration={1.5} />
+                <CountUp delay={5} end={34} duration={5} />
               </span>
               +
             </div>

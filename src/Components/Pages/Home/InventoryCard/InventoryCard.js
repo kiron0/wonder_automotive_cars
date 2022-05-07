@@ -16,7 +16,7 @@ const InventoryCard = ({ inventoryCard }) => {
       <div className="info">
         <h3>${price}</h3>
         <h4>{name}</h4>
-        <p>{quantity} cars</p>
+        <p><strong>{quantity} cars</strong></p>
         <p>
           {description?.slice(0, 80)}
           {description?.length > 100 && (

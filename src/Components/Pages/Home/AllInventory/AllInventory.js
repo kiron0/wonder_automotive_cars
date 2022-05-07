@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 import ManageInventory from "../ManageInventory/ManageInventory";
@@ -7,6 +8,7 @@ import "../ManageInventory/ManageInventory.css";
 
 const AllInventory = () => {
   const [inventories, setInventories] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("https://cars-warehouse.herokuapp.com/cars")
       .then((res) => res.json())
@@ -60,6 +62,13 @@ const AllInventory = () => {
               ></ManageInventory>
             }
           </div>
+          <button
+            onClick={() => navigate("/add-inventory")}
+            style={{ marginTop: "5rem", marginBottom: "5rem" }}
+            className="btn btn-primary mx-auto d-block more-btn"
+          >
+            Add More Item
+          </button>
         </div>
       </div>
     </div>

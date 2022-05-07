@@ -3,11 +3,12 @@ import "./ManageInventory.css";
 import trash from "../../../Assets/logo/trash-2.png";
 import edit from "../../../Assets/logo/edit.png";
 import { Link } from "react-router-dom";
+import { GrUpdate } from "react-icons/gr";
 
 function ManageInventory({ inventories, handleDeleteInventories }) {
   return (
     <div className="admin-vol-list">
-      <h5 className="display-5 py-lg-4 pb-2 text-center">
+      <h5 className="display-5 py-lg-0 pb-2 text-center">
         Manage All Inventory List
       </h5>
       <div className="admin-content">
@@ -31,7 +32,7 @@ function ManageInventory({ inventories, handleDeleteInventories }) {
                   <td>${inventory.price}</td>
                   <td>{inventory.quantity}</td>
                   <td>{inventory.supplier}</td>
-                  <td>
+                  <td className="buttons">
                     <button
                       className="btn btn-danger"
                       onClick={() => handleDeleteInventories(inventory._id)}
@@ -46,6 +47,12 @@ function ManageInventory({ inventories, handleDeleteInventories }) {
                           style={{ width: "21px" }}
                         />
                       </button>
+                    </Link>
+                    <Link to={`/inventory/${inventory._id}`}>
+                      <GrUpdate
+                        className="update-btn2"
+                        style={{ width: "33px", position: "relative" }}
+                      ></GrUpdate>
                     </Link>
                   </td>
                 </tr>

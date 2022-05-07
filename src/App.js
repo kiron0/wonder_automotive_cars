@@ -1,4 +1,5 @@
 import "./App.css";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -17,11 +18,40 @@ import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 import MyInventory from "./Components/Pages/MyInventory/MyInventory";
 import ScrollButton from "./Components/Pages/Shared/ScrollButton/ScrollButton";
 import UpdateInventory from "./Components/Pages/Shared/UpdateInventory/UpdateInventory";
+import { useEffect, useState } from "react";
+import { css } from "@emotion/react";
+
+const override = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+`;
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
   return (
     <div className="App">
-      <Header></Header>
+      {loading ? (
+        <ClimbingBoxLoader
+          color={"#FD233D"}
+          loading={loading}
+          size={25}
+          css={override}
+        />
+      ) : (
+        <Header></Header>
+      )}
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>

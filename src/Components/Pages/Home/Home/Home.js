@@ -6,6 +6,7 @@ import StatisticsCounter from "../StaticticsCouter/StatisticsCounter";
 import Banner from "../Banner/Banner";
 import Footer from "../../Shared/Footer/Footer";
 import Partners from "../Partners/Partners";
+import ContactUs from "../ContactUs/ContactUs";
 
 const Home = () => {
   return (
@@ -98,6 +99,7 @@ const Home = () => {
       <HomeInventory></HomeInventory>
       <StatisticsCounter></StatisticsCounter>
       <Partners></Partners>
+      <ContactUs></ContactUs>
       <Footer></Footer>
     </>
   );
