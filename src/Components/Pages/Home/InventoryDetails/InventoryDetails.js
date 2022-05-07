@@ -173,13 +173,13 @@ function InventoryDetails() {
           <InputGroup className="mb-3 input">
             <FormControl
               name="update"
-              placeholder="Update Inventory Quantity"
-              aria-label="Update Inventory Quantity"
+              placeholder="Restock Inventory"
+              aria-label="Restock Inventory"
               aria-describedby="basic-addon2"
               type="number"
             />
             <Button variant="primary" type="submit">
-              Update
+              Restock
             </Button>
           </InputGroup>
         </form>
