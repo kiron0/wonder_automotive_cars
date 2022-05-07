@@ -1,7 +1,7 @@
 # Wonder Automotive Cars
 
-### It's a simple React base Web App.
-### Here you can see Cars Warehouse Management/Cars dealership type website.
+### It's a Full-Stack React base Web App.
+### Here you can see Cars Warehouse Management/Cars Dealership type website.
 ----
 ## The following things in this project:
 
