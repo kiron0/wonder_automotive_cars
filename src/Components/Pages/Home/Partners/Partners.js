@@ -16,7 +16,7 @@ import './Partners.css';
 const Partners = () => {
   return (
     <div className="logos">
-      <p className="text-center fs-5">Thank For Supporting</p>
+      <p className="text-center fs-5">Thanks For Supporting</p>
       <h2 className="text-center title fs-1">Our <span className="heading-color">Partners</span></h2>
       <div className="car-logo">
           <img src={alfa} alt="alfa" />

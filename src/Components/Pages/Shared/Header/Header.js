@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import CustomLink from "../CustomLink/CustomLink";
 import { RiMenu4Fill } from "react-icons/ri";
+import {AiFillCar} from "react-icons/ai";
 import "./Header.css";
 import { auth } from "../../../../Firebase/Firebase.init";
 import userIcon from "../../../Assets/logo/users-alt.png";
@@ -18,7 +19,7 @@ const Header = () => {
   };
 
   const changeBackground = () => {
-    if (window.scrollY >= 65) {
+    if (window.scrollY >= 60) {
       setHeader(true);
     } else {
       setHeader(false);
@@ -35,7 +36,7 @@ const Header = () => {
     >
       <Navbar.Brand>
         <Link className="title text-black" to="/">
-          Wonder Automotive Cars
+          <AiFillCar className="car-icons"></AiFillCar> Wonder Automotive Cars
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggle">

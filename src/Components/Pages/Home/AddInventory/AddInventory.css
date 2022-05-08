@@ -25,6 +25,7 @@ input[type="number"] {
 }
 
 .add-btn {
+  background-color: black !important;
   width: 35%;
   margin: 0 auto;
 }
@@ -42,7 +43,7 @@ input[type="number"] {
     margin-left: 1rem;
   }
   .add-btn {
-    width: 45%;
+    width:50%;
     margin: 0 auto;
   }
 }

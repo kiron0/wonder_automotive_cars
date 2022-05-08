@@ -2,6 +2,7 @@ import React from "react";
 import Swal from "sweetalert2";
 import Google from "../../../Assets/googleplay.png";
 import Apple from "../../../Assets/appstore.png";
+import FooterAfter from '../../../Assets/footer-after.png';
 import {
   FaTwitter,
   FaFacebookF,
@@ -9,6 +10,7 @@ import {
   FaGooglePlusG,
 } from "react-icons/fa";
 import "./Footer.css";
+import { AiFillCar } from "react-icons/ai";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -34,7 +36,7 @@ const Footer = () => {
                 <div className="widget">
                   <div className="logo">
                     {" "}
-                    <h2>Wonder Automotive Cars</h2>
+                    <h2><AiFillCar className="car-icons"></AiFillCar> Wonder Automotive Cars</h2>
                     {/* <img alt="" src="images/logo.png" />{" "} */}
                   </div>
                   <p>
@@ -155,6 +157,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <img src={FooterAfter} alt="" />
       </footer>
     </>
   );

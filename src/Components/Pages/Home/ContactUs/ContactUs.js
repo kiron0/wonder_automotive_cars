@@ -8,7 +8,7 @@ const ContactUs = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     Swal.fire({
-      title: `Thank you ${name} for contacting us!`,
+      title: `Thank you, ${name} for contacting with us!`,
       text: `We will get back to you in ${email}'s inbox.`,
       icon: "success",
       confirmButtonText: "Close",

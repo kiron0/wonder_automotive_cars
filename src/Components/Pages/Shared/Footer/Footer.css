@@ -10,8 +10,8 @@ footer li span:hover {
   color: red;
 }
 
-.footer-bg {
-  padding-bottom: 5rem;
+.footer-bg img{
+  width: 100%;
 }
 
 .widget ul > li > a:hover {
@@ -19,7 +19,6 @@ footer li span:hover {
 }
 
 footer .footer-bg {
-  padding-bottom: 110px;
   position: relative;
   border-top: 1px dashed #ddd;
   background: rgba(0, 0, 0, 0) url("../../../Assets/footer-banner.png") repeat-x

@@ -80,7 +80,7 @@ const MyInventory = () => {
   };
   return (
     <div>
-      <h5 className="py-lg-4 pb-2 text-center">
+      <h5 className="display-5 fst-italic py-lg-4 pb-2 text-center">
         Your Total Added Inventories: {myInventories.length}
       </h5>
       <div className="my-inventory-container">

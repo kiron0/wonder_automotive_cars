@@ -8,6 +8,10 @@
   object-fit: cover;
 }
 
+.more-btn2{
+  width: 35%;
+}
+
 @media screen and (max-width: 490px){
   .updated{
     width: 90%;
@@ -21,6 +25,9 @@
     margin: 0 auto;
     width: 90%;
     max-height: 300px;
+  }
+  .more-btn2{
+    width: 45%;
   }
 }
 @media screen and (min-width: 768px){

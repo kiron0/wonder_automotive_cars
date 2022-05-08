@@ -184,6 +184,13 @@ function InventoryDetails() {
           </InputGroup>
         </form>
       </Card>
+      <button
+        onClick={() => navigate("/add-inventory")}
+        style={{ marginTop: "5rem", marginBottom: "5rem" }}
+        className="btn btn-danger mx-auto d-block more-btn2"
+      >
+        Add More Item
+      </button>
     </div>
   );
 }
