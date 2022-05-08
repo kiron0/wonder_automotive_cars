@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   const changeBackground = () => {
-    if (window.scrollY >= 60) {
+    if (window.scrollY >= 50) {
       setHeader(true);
     } else {
       setHeader(false);

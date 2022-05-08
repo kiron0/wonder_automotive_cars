@@ -40,7 +40,7 @@ function UserInventory({ myInventory, handleDelete }) {
         </Link>
         <Link to={`/inventory/${_id}`}>
           <GrUpdate
-            className="update-btn"
+            className="update-btn3"
             style={{ width: "46px", position: "relative" }}
           ></GrUpdate>
         </Link>
