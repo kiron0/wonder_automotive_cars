@@ -144,15 +144,58 @@ function InventoryDetails() {
   };
 
   return (
-    <div className="updated mx-auto d-block my-4">
+    <div className="updated mx-auto d-block my-4 container">
       <button
         className="btn btn-secondary d-flex align-items-center"
         onClick={() => navigate(-1)}
-        style={{ margin: "0 auto", display: "block", marginBottom: "1rem" }}
+        style={{ margin: "0 auto", display: "block", marginBottom: "2.5rem" }}
       >
         <BiLeftArrowAlt className="fs-5"></BiLeftArrowAlt>
         Back
       </button>
+      <Card className="border-0">
+        <div className="card-inventory">
+          <div className="image-card">
+            <img src={item.image} alt="" />
+          </div>
+          <div className="info-card">
+            <h2 className="mb-2">{item.name}</h2>
+            <h4>
+              <strong>{item.quantity} cars</strong>
+            </h4>
+            <h3>
+              <strong>${item.price}</strong>
+            </h3>
+            <p className="mt-4" style={{ fontWeight: "500" }}>
+              {item.description}
+            </p>
+            <p className="fs-4">
+              <strong>Supplier: {item.supplier}</strong>
+            </p>
+            <button
+              className="btn btn-danger mb-4 mb-lg-5 mt-lg-2"
+              onClick={deliveredInventory}
+            >
+              Delivered
+            </button>{" "}
+            <form onSubmit={handleQuantityUpdate}>
+              <InputGroup className="mb-3 input">
+                <FormControl
+                  name="update"
+                  placeholder="Restock Inventory"
+                  aria-label="Restock Inventory"
+                  aria-describedby="basic-addon2"
+                  type="number"
+                />
+                <Button variant="danger" type="submit">
+                  Restock
+                </Button>
+              </InputGroup>
+            </form>
+          </div>
+        </div>{" "}
+      </Card>
+      {/* 
       <Card className="border-0">
         <Card.Img variant="top" src={item.image} />
         <Card.Body>
@@ -168,22 +211,8 @@ function InventoryDetails() {
           <Button variant="danger" onClick={deliveredInventory}>
             Delivered
           </Button>
-        </Card.Body>
-        <form onSubmit={handleQuantityUpdate}>
-          <InputGroup className="mb-3 input">
-            <FormControl
-              name="update"
-              placeholder="Restock Inventory"
-              aria-label="Restock Inventory"
-              aria-describedby="basic-addon2"
-              type="number"
-            />
-            <Button variant="danger" type="submit">
-              Restock
-            </Button>
-          </InputGroup>
-        </form>
-      </Card>
+        </Card.Body> */}
+      {/* </Card> */}
       <button
         onClick={() => navigate("/add-inventory")}
         style={{ marginTop: "5rem", marginBottom: "5rem" }}
