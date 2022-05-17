@@ -15,11 +15,7 @@ function InventoryDetails() {
   const navigate = useNavigate();
   useEffect(() => {
     const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
-    fetch(url, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id, isReload]);
