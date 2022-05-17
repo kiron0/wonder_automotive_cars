@@ -26,11 +26,11 @@ const HomeInventory = () => {
         ))}
       </span>
       <button
-        onClick={() => navigate("/add-inventory")}
+        onClick={() => navigate("/manage")}
         style={{ marginTop: "5rem", marginBottom: "5rem" }}
         className="btn btn-danger mx-auto d-block"
       >
-        Add More Item
+        Show More
       </button>
     </div>
   );

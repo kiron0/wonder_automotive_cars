@@ -15,7 +15,11 @@ function InventoryDetails() {
   const navigate = useNavigate();
   useEffect(() => {
     const url = `https://cars-warehouse.herokuapp.com/cars/${id}`;
-    fetch(url)
+    fetch(url, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id, isReload]);
@@ -214,11 +218,11 @@ function InventoryDetails() {
         </Card.Body> */}
       {/* </Card> */}
       <button
-        onClick={() => navigate("/add-inventory")}
+        onClick={() => navigate("/manage")}
         style={{ marginTop: "5rem", marginBottom: "5rem" }}
         className="btn btn-danger mx-auto d-block more-btn2"
       >
-        Add More Item
+        Manage Inventories
       </button>
     </div>
   );

@@ -64,6 +64,9 @@ const Header = () => {
           <CustomLink className="link" to="/blog">
             Blog
           </CustomLink>
+          <CustomLink className="link" to="/partners">
+            Partners
+          </CustomLink>
           {user?.email && (
             <li className="nav-item user pl-2">
               <img src={userIcon} alt="" />

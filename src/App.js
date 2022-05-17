@@ -21,6 +21,7 @@ import UpdateInventory from "./Components/Pages/Shared/UpdateInventory/UpdateInv
 import { useEffect, useState } from "react";
 import { css } from "@emotion/react";
 import UserProfile from "./Components/Pages/Shared/UserProfile/UserProfile";
+import Partners from "./Components/Pages/Home/Partners/Partners";
 
 const override = css`
   display: flex;
@@ -59,6 +60,7 @@ function App() {
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path="/partners" element={<Partners></Partners>}></Route>
         <Route
           path="/add-inventory"
           element={
